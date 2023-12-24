@@ -61,3 +61,8 @@ class Svg(CollectionMember, index.Indexed, models.Model):
     @property
     def url(self):
         return self.file.url
+
+    #récupérer l'intégralité du code HTML du SVG
+    @property
+    def html(self):
+        return self.file.read().decode('utf-8')
